@@ -1,12 +1,10 @@
 package com.android.quizzapp;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -16,7 +14,6 @@ import android.widget.Toast;
 public class QuizActivity extends AppCompatActivity {
     int total;
     int correct;
-    int counter = 0;
     RadioGroup[] radioGroup = new RadioGroup[8];
     CheckBox checkBoxOne;
     CheckBox checkBoxTwo;
@@ -28,54 +25,68 @@ public class QuizActivity extends AppCompatActivity {
     boolean checkOptionThree;
     boolean checkOptionFour;
     Questions[] question = new Questions[8];
+    Button button;
     private int backButtonCount = 0;
+    IResult result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        checkBoxOne = findViewById(R.id.q2op1);
-        checkBoxTwo = findViewById(R.id.q2op2);
-        checkBoxThree = findViewById(R.id.q2op3);
-        checkBoxFour = findViewById(R.id.q2op4);
-        radioGroup[0] = findViewById(R.id.question_one);
-        radioGroup[1] = findViewById(R.id.question_three);
-        radioGroup[2] = findViewById(R.id.question_four);
-        radioGroup[3] = findViewById(R.id.question_five);
-        radioGroup[4] = findViewById(R.id.question_six);
-        radioGroup[5] = findViewById(R.id.question_seven);
-        radioGroup[6] = findViewById(R.id.question_eight);
-        radioGroup[7] = findViewById(R.id.question_nine);
-        editText = findViewById(R.id.question_ten_edit);
+        checkBoxOne = findViewById(R.id.question_2_option_1_cb);
+        checkBoxTwo = findViewById(R.id.question_2_option_2_cb);
+        checkBoxThree = findViewById(R.id.question_2_option_3_cb);
+        checkBoxFour = findViewById(R.id.question_2_option_4_cb);
+        radioGroup[0] = findViewById(R.id.question_one_rg);
+        radioGroup[1] = findViewById(R.id.question_three_rg);
+        radioGroup[2] = findViewById(R.id.question_four_rg);
+        radioGroup[3] = findViewById(R.id.question_five_rg);
+        radioGroup[4] = findViewById(R.id.question_six_rg);
+        radioGroup[5] = findViewById(R.id.question_seven_rg);
+        radioGroup[6] = findViewById(R.id.question_eight_rg);
+        radioGroup[7] = findViewById(R.id.question_nine_rg);
+        editText = findViewById(R.id.question_ten_et);
+        button = findViewById(R.id.submit_button);
+        result = new Results();
 
-        question[0] = new Questions(getString(R.string.question1), getString(R.string.q1op1), getString(R.string.q1op2), getString(R.string.q1op3), getString(R.string.q1op4), new Answer(getString(R.string.q1op2)));
-        question[1] = new Questions(getString(R.string.question3), getString(R.string.q3op1), getString(R.string.q3op2), getString(R.string.q3op3), getString(R.string.q3op4), new Answer(getString(R.string.q3op3)));
-        question[2] = new Questions(getString(R.string.question4), getString(R.string.q4op1), getString(R.string.q4op2), getString(R.string.q4op3), getString(R.string.q4op4), new Answer(getString(R.string.q4op4)));
-        question[3] = new Questions(getString(R.string.question5), getString(R.string.q5op1), getString(R.string.q5op2), getString(R.string.q5op3), getString(R.string.q5op4), new Answer(getString(R.string.q5op2)));
-        question[4] = new Questions(getString(R.string.question6), getString(R.string.q6op1), getString(R.string.q6op2), "", "", new Answer(getString(R.string.q6op2)));
-        question[5] = new Questions(getString(R.string.question7), getString(R.string.q7op1), getString(R.string.q7op2), getString(R.string.q7op3), getString(R.string.q7op4), new Answer(getString(R.string.q7op1)));
-        question[6] = new Questions(getString(R.string.question8), getString(R.string.q8op1), getString(R.string.q8op2), getString(R.string.q8op3), getString(R.string.q8op4), new Answer(getString(R.string.q8op4)));
-        question[7] = new Questions(getString(R.string.question9), getString(R.string.q9op1), getString(R.string.q9op2), getString(R.string.q9op3), getString(R.string.q9op4), new Answer(getString(R.string.q9op2)));
+        question[0] = new Questions(getString(R.string.question1_rg), getString(R.string.question1_option1_rb), getString(R.string.question1_option2_rb), getString(R.string.question1_option3_rb), getString(R.string.question1_option4_rb), new Answer(getString(R.string.question1_option2_rb)));
+        question[1] = new Questions(getString(R.string.question3_rg), getString(R.string.question3_option1_rb), getString(R.string.question3_option2_rb), getString(R.string.question3_option3_rb), getString(R.string.question3_option4_rb), new Answer(getString(R.string.question3_option3_rb)));
+        question[2] = new Questions(getString(R.string.question4_rg), getString(R.string.question4_option1_rb), getString(R.string.question4_option2_rb), getString(R.string.question4_option3_rb), getString(R.string.question4_option4_rb), new Answer(getString(R.string.question4_option4_rb)));
+        question[3] = new Questions(getString(R.string.question5_rg), getString(R.string.question5_option1_rb), getString(R.string.question5_option2_rb), getString(R.string.question5_option3_rb), getString(R.string.question5_option4_rb), new Answer(getString(R.string.question5_option2_rb)));
+        question[4] = new Questions(getString(R.string.question6_rg), getString(R.string.question6_option1_rb), getString(R.string.question6_option2_rb), "", "", new Answer(getString(R.string.question6_option2_rb)));
+        question[5] = new Questions(getString(R.string.question7_rg), getString(R.string.question7_option1_rb), getString(R.string.question7_option2_rb), getString(R.string.question7_option3_rb), getString(R.string.question7_option4_rb), new Answer(getString(R.string.question7_option1_rb)));
+        question[6] = new Questions(getString(R.string.question8_rg), getString(R.string.question18_option1_rb), getString(R.string.question8_option2_rb), getString(R.string.question8_option3_rb), getString(R.string.question8_option4_rb), new Answer(getString(R.string.question8_option4_rb)));
+        question[7] = new Questions(getString(R.string.question9_rg), getString(R.string.question9_option1_rb), getString(R.string.question9_option2_rb), getString(R.string.question9_option3_rb), getString(R.string.question9_option4_rb), new Answer(getString(R.string.question9_option2_rb)));
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startQuiz();
+                result.showResult(correct, total);
+                String msg = result.getMessage();
+                Toast.makeText(QuizActivity.this, msg, Toast.LENGTH_LONG).show();
+                total = 0;
+                correct = 0;
+            }
+        });
 
     }
 
     void startQuiz() {
         String answers[] = new String[8];
-        for (RadioGroup r : radioGroup) {
-            int selectedId = r.getCheckedRadioButtonId();
+        for (int i = 0 ; i < radioGroup.length; i++) {
+            int selectedId = radioGroup[i].getCheckedRadioButtonId();
             if (selectedId == -1) {
                 RadioButton selectedRadioButton = findViewById(R.id.q1op1);
                 selectedRadioButton.setError("you have to answer this question");
             } else {
                 RadioButton selectedRadioButton = findViewById(selectedId);
-                answers[counter] = selectedRadioButton.getText().toString();
+                answers[i] = selectedRadioButton.getText().toString();
             }
-
-            counter++;
         }
 
-        counter = 0;
+        int counter = 0;
         for (Questions q : question) {
             if (q.getAnswer1().getAnswer().equals(answers[counter])) {
                 correct++;
@@ -98,33 +109,6 @@ public class QuizActivity extends AppCompatActivity {
             correct++;
         }
         total++;
-    }
-
-    public void submitAnswers(View view) {
-        AlertDialog.Builder builder;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
-        } else {
-            builder = new AlertDialog.Builder(this);
-        }
-        builder.setTitle("Submit Answers")
-                .setMessage("Are you sure you want to submit these answers?")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        startQuiz();
-                        Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent.putExtra("correct", correct);
-                        intent.putExtra("total", total);
-                        startActivity(intent);
-                    }
-                })
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // do nothing
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_info).show();
     }
 
     @Override

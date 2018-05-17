@@ -6,11 +6,11 @@
     <!-- ============================ -->
     <!-- Question One and its options -->
     <!-- ============================ -->
-    <string name="question1">Question 1:\n Object-Oriented Programming means ... </string>
-    <string name="q1op1">Being objective about what you develop</string>
-    <string name="q1op2">Designing the application based on the objects discovered when analysing the problem</string>
-    <string name="q1op3">Writing an algorithm before writing your program and having a test plan</string>
-    <string name="q1op4">Writing a program composed of Java classes</string>
+    <string name="question1_rg">Question 1:\n Object-Oriented Programming means ... </string>
+    <string name="question1_option1_rb">Being objective about what you develop</string>
+    <string name="question1_option2_rb">Designing the application based on the objects discovered when analysing the problem</string>
+    <string name="question1_option3_rb">Writing an algorithm before writing your program and having a test plan</string>
+    <string name="question1_option4_rb">Writing a program composed of Java classes</string>
     <!-- ============================ -->
     <!-- Question Two and its options -->
     <!-- ============================ -->
@@ -22,62 +22,62 @@
     <!-- ============================ -->
     <!-- Question Three and its options -->
     <!-- ============================ -->
-    <string name="question3">Question 3:\n Who Created Java?</string>
-    <string name="q3op1">Dennis Ritchie</string>
-    <string name="q3op2">Linus Torvalds</string>
-    <string name="q3op3">James Gosling</string>
-    <string name="q3op4">Bjarne Stroustrup</string>
+    <string name="question3_rg">Question 3:\n Who Created Java?</string>
+    <string name="question3_option1_rb">Dennis Ritchie</string>
+    <string name="question3_option2_rb">Linus Torvalds</string>
+    <string name="question3_option3_rb">James Gosling</string>
+    <string name="question3_option4_rb">Bjarne Stroustrup</string>
     <!-- ============================ -->
     <!-- Question Four and its options -->
     <!-- ============================ -->
-    <string name="question4">Question 4:\n Choose the appropriate data type for this field : hasChocolate ..</string>
-    <string name="q4op1">String</string>
-    <string name="q4op2">int</string>
-    <string name="q4op3">float</string>
-    <string name="q4op4">boolean</string>
+    <string name="question4_rg">Question 4:\n Choose the appropriate data type for this field : hasChocolate ..</string>
+    <string name="question4_option1_rb">String</string>
+    <string name="question4_option2_rb">int</string>
+    <string name="question4_option3_rb">float</string>
+    <string name="question4_option4_rb">boolean</string>
     <!-- ============================ -->
     <!-- Question Five and its options -->
     <!-- ============================ -->
-    <string name="question5">Question 5:\n An Object could be ...</string>
-    <string name="q5op1">a data container</string>
-    <string name="q5op2">Any thing</string>
-    <string name="q5op3">a little program</string>
-    <string name="q5op4">a snippet of code</string>
+    <string name="question5_rg">Question 5:\n An Object could be ...</string>
+    <string name="question5_option1_rb">a data container</string>
+    <string name="question5_option2_rb">Any thing</string>
+    <string name="question5_option3_rb">a little program</string>
+    <string name="question5_option4_rb">a snippet of code</string>
     <!-- ============================ -->
     <!-- Question Six and its options -->
     <!-- ============================ -->
-    <string name="question6">Question 6:\n String is a Java Primitive Data Type..</string>
-    <string name="q6op1">True</string>
-    <string name="q6op2">False</string>
+    <string name="question6_rg">Question 6:\n String is a Java Primitive Data Type..</string>
+    <string name="question6_option1_rb">True</string>
+    <string name="question6_option2_rb">False</string>
     <!-- ============================ -->
     <!-- Question Seven and its options -->
     <!-- ============================ -->
-    <string name="question7">Question 7:\n The following is an example of a boolean expression :</string>
-    <string name="q7op1">case == solved</string>
-    <string name="q7op2">hasCream = true</string>
-    <string name="q7op3">num = 7</string>
-    <string name="q7op4">message.setText("Hello Android")</string>
+    <string name="question7_rg">Question 7:\n The following is an example of a boolean expression :</string>
+    <string name="question7_option1_rb">case == solved</string>
+    <string name="question7_option2_rb">hasCream = true</string>
+    <string name="question7_option3_rb">num = 7</string>
+    <string name="question7_option4_rb">message.setText("Hello Android")</string>
     <!-- ============================ -->
     <!-- Question Eight and its options -->
     <!-- ============================ -->
-    <string name="question8">Question 8:\n A function is:</string>
-    <string name="q8op1">A kind of computer</string>
-    <string name="q8op2">A way of storing values</string>
-    <string name="q8op3">A sequence of characters enclosed by quotes</string>
-    <string name="q8op4">An entity that receives inputs and outputs</string>
+    <string name="question8_rg">Question 8:\n A function is:</string>
+    <string name="question18_option1_rb">A kind of computer</string>
+    <string name="question8_option2_rb">A way of storing values</string>
+    <string name="question8_option3_rb">A sequence of characters enclosed by quotes</string>
+    <string name="question8_option4_rb">An entity that receives inputs and outputs</string>
     <!-- ============================ -->
     <!-- Question Nine and its options -->
     <!-- ============================ -->
-    <string name="question9">Question 9:\n The following is not an example of a data type...</string>
-    <string name="q9op1">int</string>
-    <string name="q9op2">public</string>
-    <string name="q9op3">Button</string>
-    <string name="q9op4">void</string>
+    <string name="question9_rg">Question 9:\n The following is not an example of a data type...</string>
+    <string name="question9_option1_rb">int</string>
+    <string name="question9_option2_rb">public</string>
+    <string name="question9_option3_rb">Button</string>
+    <string name="question9_option4_rb">void</string>
     <!-- ============================ -->
     <!-- Question Ten and its options -->
     <!-- ============================ -->
-    <string name="question10">Question 10:\n What is the biggest positive Number that a byte data type can store?</string>
-    <string name="q10_hint">Enter answer here</string>
+    <string name="question10_et">Question 10:\n What is the biggest positive Number that a byte data type can store?</string>
+    <string name="question10_et_hint">Enter answer here</string>
     <string name="question_ten_answer">127</string>
     <!-- ============================ -->
     <!-- submit Button -->

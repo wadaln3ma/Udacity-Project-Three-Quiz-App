@@ -1,13 +1,12 @@
 package com.android.quizzapp;
 
-
 public class Results implements IResult {
     private String message;
 
     public void showResult(int correct, int total) {
         int score = (correct * 100) / total;
         if (score == 100) {
-            message = "Total Number Of Question: " + total
+            message = "Total Number of Questions: " + total
                     + "\nCorrect Answers: " + correct
                     + "\nYour Score is: %" + score
                     + "\nCongratulations You Aced the Quiz";
