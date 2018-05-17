@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Quizz App</string>
+    <string name="greetings">Java Quiz</string>
+    <string name="startQuiz">Click Here to Start</string>
+    <string name="restart_quiz">Restart Quiz</string>
+    <!-- ============================ -->
+    <!-- Question One and its options -->
+    <!-- ============================ -->
+    <string name="question1">Question 1:\n Object-Oriented Programming means ... </string>
+    <string name="q1op1">Being objective about what you develop</string>
+    <string name="q1op2">Designing the application based on the objects discovered when analysing the problem</string>
+    <string name="q1op3">Writing an algorithm before writing your program and having a test plan</string>
+    <string name="q1op4">Writing a program composed of Java classes</string>
+    <!-- ============================ -->
+    <!-- Question Two and its options -->
+    <!-- ============================ -->
+    <string name="question2">Question 2:\n Which one of these is a Java keyword?</string>
+    <string name="q2op1">Java</string>
+    <string name="q2op2">this</string>
+    <string name="q2op3">Object</string>
+    <string name="q2op4">for</string>
+    <!-- ============================ -->
+    <!-- Question Three and its options -->
+    <!-- ============================ -->
+    <string name="question3">Question 3:\n Who Created Java?</string>
+    <string name="q3op1">Dennis Ritchie</string>
+    <string name="q3op2">Linus Torvalds</string>
+    <string name="q3op3">James Gosling</string>
+    <string name="q3op4">Bjarne Stroustrup</string>
+    <!-- ============================ -->
+    <!-- Question Four and its options -->
+    <!-- ============================ -->
+    <string name="question4">Question 4:\n Choose the appropriate data type for this field : hasChocolate ..</string>
+    <string name="q4op1">String</string>
+    <string name="q4op2">int</string>
+    <string name="q4op3">float</string>
+    <string name="q4op4">boolean</string>
+    <!-- ============================ -->
+    <!-- Question Five and its options -->
+    <!-- ============================ -->
+    <string name="question5">Question 5:\n An Object could be ...</string>
+    <string name="q5op1">a data container</string>
+    <string name="q5op2">Any thing</string>
+    <string name="q5op3">a little program</string>
+    <string name="q5op4">a snippet of code</string>
+    <!-- ============================ -->
+    <!-- Question Six and its options -->
+    <!-- ============================ -->
+    <string name="question6">Question 6:\n String is a Java Primitive Data Type..</string>
+    <string name="q6op1">True</string>
+    <string name="q6op2">False</string>
+    <!-- ============================ -->
+    <!-- Question Seven and its options -->
+    <!-- ============================ -->
+    <string name="question7">Question 7:\n The following is an example of a boolean expression :</string>
+    <string name="q7op1">case == solved</string>
+    <string name="q7op2">hasCream = true</string>
+    <string name="q7op3">num = 7</string>
+    <string name="q7op4">message.setText("Hello Android")</string>
+    <!-- ============================ -->
+    <!-- Question Eight and its options -->
+    <!-- ============================ -->
+    <string name="question8">Question 8:\n A function is:</string>
+    <string name="q8op1">A kind of computer</string>
+    <string name="q8op2">A way of storing values</string>
+    <string name="q8op3">A sequence of characters enclosed by quotes</string>
+    <string name="q8op4">An entity that receives inputs and outputs</string>
+    <!-- ============================ -->
+    <!-- Question Nine and its options -->
+    <!-- ============================ -->
+    <string name="question9">Question 9:\n The following is not an example of a data type...</string>
+    <string name="q9op1">int</string>
+    <string name="q9op2">public</string>
+    <string name="q9op3">Button</string>
+    <string name="q9op4">void</string>
+    <!-- ============================ -->
+    <!-- Question Ten and its options -->
+    <!-- ============================ -->
+    <string name="question10">Question 10:\n What is the biggest positive Number that a byte data type can store?</string>
+    <string name="q10_hint">Enter answer here</string>
+    <string name="question_ten_answer">127</string>
+    <!-- ============================ -->
+    <!-- submit Button -->
+    <!-- ============================ -->
+    <string name="submitButton">Submit</string>
+</resources>
